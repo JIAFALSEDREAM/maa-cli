@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Run typos
         uses: crate-ci/typos@v1
 
@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Format Check
         run: |
           rustup toolchain install nightly --profile minimal --component rustfmt
@@ -61,7 +61,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install cargo-deny
         uses: taiki-e/install-action@v2
         with:
@@ -81,7 +81,7 @@ jobs:
           - macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Cache
         uses: Swatinem/rust-cache@v2
       - name: Test
@@ -97,7 +97,7 @@ jobs:
           - windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Cache
         uses: Swatinem/rust-cache@v2
       - name: Test
@@ -115,7 +115,7 @@ jobs:
           - windows-11-arm
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Cache
         uses: Swatinem/rust-cache@v2
       - name: Test
@@ -135,7 +135,7 @@ jobs:
           - git2 # disabled both cli_installer and core_installer, used by appimage
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Test
         run: |
           cargo x test --no-all-features --no-core-tests \
@@ -151,7 +151,7 @@ jobs:
           - ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@v2
         with:
@@ -181,7 +181,7 @@ jobs:
           - macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@v2
         with:
@@ -202,7 +202,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@v2
         with:
